@@ -2,8 +2,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from Const import WIN_WIDTH
-
+from Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE
 
 
 class Menu:
@@ -25,7 +24,12 @@ class Menu:
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50 , "Mountain", (255, 128, 0), ((WIN_WIDTH / 2), 70))
+            self.menu_text(50 , "Mountain", COLOR_ORANGE, ((WIN_WIDTH / 2), 70))
+            self.menu_text(50, "Shooter", COLOR_ORANGE, ((WIN_WIDTH / 2), 120))
+
+            for i in range(len(MENU_OPTION)):
+                self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
+
             pygame.display.flip()
 
             # Check for all events
