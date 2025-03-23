@@ -13,8 +13,8 @@ class Game:
 
         while True:
             menu = Menu(self.window)
-            menu.run()
-            pass
+            menu_return = menu.run()
+
 
 
 
