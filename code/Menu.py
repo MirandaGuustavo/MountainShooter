@@ -55,6 +55,6 @@ class Menu:
                             menu_option = len(MENU_OPTION) - 1
 
                     if event.key == pygame.K_RETURN:  #ENTER
-                        return MENU_OPTION(menu_option)
+                        return MENU_OPTION[menu_option]
 
 
